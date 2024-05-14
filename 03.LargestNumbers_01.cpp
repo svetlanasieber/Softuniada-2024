@@ -7,12 +7,12 @@
 std::vector<int> kLargestElements(const std::vector<int>& arr, int k) {
     std::priority_queue<int, std::vector<int>, std::greater<int>> minHeap;
 
-    // Add the first k elements to the min heap
+
     for (int i = 0; i < k; ++i) {
         minHeap.push(arr[i]);
     }
 
-    // Go through the rest of the array
+   
     for (int i = k; i < arr.size(); ++i) {
         if (arr[i] > minHeap.top()) {
             minHeap.pop();
@@ -20,7 +20,7 @@ std::vector<int> kLargestElements(const std::vector<int>& arr, int k) {
         }
     }
 
-    // Extract the elements from the heap into a vector
+   
     std::vector<int> result;
     result.reserve(k);
     while (!minHeap.empty()) {
@@ -42,7 +42,7 @@ int main() {
 
     std::vector<int> result = kLargestElements(myArray, k);
 
-    // Sort the vector to get the elements in ascending order
+  
     std::sort(result.begin(), result.end());
 
     for (int element : result) {
