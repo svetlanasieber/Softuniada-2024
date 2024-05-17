@@ -31,7 +31,7 @@ int minKnightMoves(int N, int R, int C, int T, int F) {
         int y = front.first.second;
         int moves = front.second;
 
-        // If the target position is reached, return the number of moves
+        
         if (x == T && y == F) {
             return moves;
         }
@@ -49,7 +49,7 @@ int minKnightMoves(int N, int R, int C, int T, int F) {
         }
     }
 
-    return -1;  // If no path is found (should not happen as per problem statement)
+    return -1;  
 }
 
 int main() {
